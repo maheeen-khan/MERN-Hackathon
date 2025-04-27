@@ -72,12 +72,12 @@ const Userpanel = () => {
     <div className="min-h-screen p-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* To Do Section */}
-        <div className="bg-purple-500 rounded-lg shadow-lg p-4 flex flex-col">
+        <div className="bg-[#5cc8a4] rounded-lg shadow-lg p-4 flex flex-col">
           <div className="flex justify-between items-center mb-4 text-white">
             <h2 className="text-xl font-bold"><MenuOutlined /> To Do</h2>
 
 
-            <span className="text-sm bg-white text-purple-600 rounded-full px-2">{todoTasks.length}</span>
+            <span className="text-sm bg-white text-[#5cc8a4]  rounded-full px-2">{todoTasks.length}</span>
           </div>
           <div className="space-y-4 flex-1 overflow-auto">
             {todoTasks.length > 0 ? todoTasks.map(task => (
@@ -106,7 +106,7 @@ const Userpanel = () => {
         </div>
 
         {/* In Progress Section */}
-        <div className="bg-blue-500 rounded-lg shadow-lg p-4 flex flex-col">
+        <div className="bg-blue-400 rounded-lg shadow-lg p-4 flex flex-col">
           <div className="flex justify-between items-center mb-4 text-white">
             <h2 className="text-xl font-bold"><LineChartOutlined /> In Progress</h2>
             <span className="text-sm bg-white text-blue-600 rounded-full px-2">{inProgressTasks.length}</span>
@@ -138,10 +138,10 @@ const Userpanel = () => {
         </div>
 
         {/* Done Section */}
-        <div className="bg-orange-400 rounded-lg shadow-lg p-4 flex flex-col">
+        <div className="bg-[#5cc8a4] rounded-lg shadow-lg p-4 flex flex-col">
           <div className="flex justify-between items-center mb-4 text-white">
             <h2 className="text-xl font-bold"><CheckCircleOutlined /> Done</h2>
-            <span className="text-sm bg-white text-orange-600 rounded-full px-2">{doneTasks.length}</span>
+            <span className="text-sm bg-white text-[#5cc8a4] rounded-full px-2">{doneTasks.length}</span>
           </div>
           <div className="space-y-4 flex-1 overflow-auto">
             {doneTasks.length > 0 ? doneTasks.map(task => (
