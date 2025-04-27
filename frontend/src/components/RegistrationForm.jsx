@@ -40,7 +40,7 @@ const registrationForm = () => {
 
     return (
         <>
-            <h1 className='classroom-head text-2xl font-bold text-white text-center bg-[#161179] p-2'>Employee Management System</h1>
+            <h1 className='classroom-head text-2xl font-bold text-white text-center bg-[#161179] p-2'>TrackIt</h1>
             <h1 className='text-center mt-[100px] mb-[45px] text-[38px] text-[#161179] font-[Georgia] font-bold'>Sign up <span className='text-[#03C988]'>your Account</span></h1>
             <Form
                 name="basic"
