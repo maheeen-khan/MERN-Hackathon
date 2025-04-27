@@ -49,7 +49,7 @@ const BasicForm = () => {
         // const backendHostedURL = "https://classroom-production-fd75.up.railway.app"
 
         try {
-            const uploadData = await fetch(`http://localhost:3000/api/addTask`, {
+            const uploadData = await fetch(`https://mern-hackathon-production-0923.up.railway.app/api/addTask`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

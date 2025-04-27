@@ -24,7 +24,7 @@ const Userpanel = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await axios.delete(`http://localhost:3000/api/deleteTask/${id}`, {
+          const res = await axios.delete(`https://mern-hackathon-production-0923.up.railway.app/api/deleteTask/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -50,7 +50,7 @@ const Userpanel = () => {
     const fetchTasks = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:3000/api/getTasks', {
+        const res = await axios.get('https://mern-hackathon-production-0923.up.railway.app/api/getTasks', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -22,7 +22,7 @@ const LoginForm = () => {
 
         try {
 
-            const newUser = await axios.post('http://localhost:3000/login', values);
+            const newUser = await axios.post('https://mern-hackathon-production-0923.up.railway.app/login', values);
             console.log(newUser.data)
 
             // Save the token to local storage

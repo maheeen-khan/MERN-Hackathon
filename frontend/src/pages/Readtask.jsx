@@ -10,7 +10,7 @@ const ReadTask = () => {
   const getTask = async () => {
     const token = localStorage.getItem('token'); // retrieve token after login
     try {
-      const response = await axios.get(`http://localhost:3000/api/getTask/${id}`, {
+      const response = await axios.get(`https://mern-hackathon-production-0923.up.railway.app/api/getTask/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

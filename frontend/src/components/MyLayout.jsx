@@ -38,10 +38,10 @@ const MyLayout = ({ children }) => {
 
   const items = [
     { key: "1", label: <Link to="/addTask"><UserAddOutlined /> Add Task</Link> },
-    { key: "3", label: <Link to="/"><SearchOutlined /> Search</Link> },
+    { key: "2", label: <Link to="/user-panel"><SearchOutlined /> Search</Link> },
     // {key: '4', label: "Total Students : "+ totalStudents},
     {
-      key: '4', label: <button alt={"Logout"} className='logout user-btn pb-2' onClick={logout}>
+      key: '3', label: <button alt={"Logout"} className='logout user-btn pb-2' onClick={logout}>
 
         <i>L</i>
         <i>o</i>
@@ -55,12 +55,12 @@ const MyLayout = ({ children }) => {
   ];
 
   // Map pathname to Menu keys
-  const getSelectedKeys = () => {
-    if (location.pathname === "/addTask") return ["1"];
-    if (location.pathname === "/") return ["2"];
-    if (location.pathname === "/") return ["3"];
-    return [];
-  };
+  // const getSelectedKeys = () => {
+  //   if (location.pathname === "/addTask") return ["1"];
+  //   if (location.pathname === "/") return ["2"];
+  //   if (location.pathname === "/") return ["3"];
+  //   return [];
+  // };
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -82,8 +82,7 @@ const MyLayout = ({ children }) => {
           theme="dark"
           mode="horizontal"
           className='menu'
-          defaultSelectedKeys={['2']}
-          selectedKeys={getSelectedKeys()} // Dynamically update selected key
+          defaultSelectedKeys={['2']} // Dynamically update selected key
           items={items}
           style={{
             flex: 1,

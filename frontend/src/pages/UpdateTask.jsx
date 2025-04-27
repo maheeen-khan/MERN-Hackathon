@@ -36,7 +36,7 @@ console.log(id);
         const updateTask = async (values) => {
           try {
               const updateData = await axios.patch(
-                  `http://localhost:3000/api/updateTask/${id}`,
+                  `https://mern-hackathon-production-0923.up.railway.app/api/updateTask/${id}`,
                   values,
                   {
                       headers: {
@@ -66,7 +66,7 @@ console.log(id);
         const token = localStorage.getItem('token'); // retrieve token after login
         try {
             const uploadData = await axios.get(
-                `http://localhost:3000/api/getTask/${id}`,
+                `https://mern-hackathon-production-0923.up.railway.app/api/getTask/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
