@@ -133,7 +133,7 @@ console.log(id);
                     >
                         <div style={{ textAlign: 'center' }}>
                         <button
-                                alt={loading ? 'Updating...' : 'Update Student'}
+                                alt={loading ? 'Updating...' : 'Update Task'}
                                 className="user-btn"
                                 htmlType="submit"
                             >

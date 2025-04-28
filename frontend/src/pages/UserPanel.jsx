@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { MenuOutlined, LineChartOutlined, CheckCircleOutlined, EyeOutlined, EditOutlined, MinusCircleOutlined } from '@ant-design/icons';
+import { MenuOutlined, LineChartOutlined, CheckCircleOutlined, EyeOutlined, EditOutlined, MinusCircleOutlined, LoadingOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Link } from 'react-router-dom'
@@ -72,7 +72,7 @@ const Userpanel = () => {
     <div className="min-h-screen p-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* To Do Section */}
-        <div className="bg-[#5cc8a4] rounded-lg shadow-lg p-4 flex flex-col">
+        <div className="bg-[#5cc8a4] rounded-lg shadow-lg p-4 flex flex-col todo">
           <div className="flex justify-between items-center mb-4 text-white">
             <h2 className="text-xl font-bold"><MenuOutlined /> To Do</h2>
 
@@ -87,13 +87,13 @@ const Userpanel = () => {
            
              {/* Icons on the right */}
              <div className="flex space-x-3">
-               <Link to={`/view-task/${task._id}`} style={{ color: '#27667B' }}>
+               <Link to={`/view-task/${task._id}`} style={{ color: '#03C988' }}>
                  <EyeOutlined />
                </Link>
-               <Link to={`/update/${task._id}`} style={{ color: '#27667B' }}>
+               <Link to={`/update/${task._id}`} style={{ color: '#03C988' }}>
                  <EditOutlined />
                </Link>
-               <Link onClick={() => deleting(task._id)} style={{ color: '#27667B' }}>
+               <Link onClick={() => deleting(task._id)} style={{ color: '#03C988' }}>
                  <MinusCircleOutlined />
                </Link>
              </div>
@@ -106,9 +106,9 @@ const Userpanel = () => {
         </div>
 
         {/* In Progress Section */}
-        <div className="bg-blue-400 rounded-lg shadow-lg p-4 flex flex-col">
+        <div className="bg-blue-400 rounded-lg shadow-lg p-4 flex flex-col doing">
           <div className="flex justify-between items-center mb-4 text-white">
-            <h2 className="text-xl font-bold"><LineChartOutlined /> In Progress</h2>
+            <h2 className="text-xl font-bold"><LoadingOutlined />  In Progress</h2>
             <span className="text-sm bg-white text-blue-600 rounded-full px-2">{inProgressTasks.length}</span>
           </div>
           <div className="space-y-4 flex-1 overflow-auto">
@@ -119,13 +119,13 @@ const Userpanel = () => {
             
               {/* Icons on the right */}
               <div className="flex space-x-3">
-                <Link to={`/view-task/${task._id}`} style={{ color: '#27667B' }}>
+                <Link to={`/view-task/${task._id}`} style={{ color: '#0b7fad' }}>
                   <EyeOutlined />
                 </Link>
-                <Link to={`/update/${task._id}`} style={{ color: '#27667B' }}>
+                <Link to={`/update/${task._id}`} style={{ color: '#0b7fad' }}>
                   <EditOutlined />
                 </Link>
-                <Link onClick={() => deleting(task._id)} style={{ color: '#27667B' }}>
+                <Link onClick={() => deleting(task._id)} style={{ color: '#0b7fad' }}>
                   <MinusCircleOutlined />
                 </Link>
               </div>
@@ -138,7 +138,7 @@ const Userpanel = () => {
         </div>
 
         {/* Done Section */}
-        <div className="bg-[#5cc8a4] rounded-lg shadow-lg p-4 flex flex-col">
+        <div className="bg-[#5cc8a4] rounded-lg shadow-lg p-4 flex flex-col done">
           <div className="flex justify-between items-center mb-4 text-white">
             <h2 className="text-xl font-bold"><CheckCircleOutlined /> Done</h2>
             <span className="text-sm bg-white text-[#5cc8a4] rounded-full px-2">{doneTasks.length}</span>
@@ -151,13 +151,13 @@ const Userpanel = () => {
             
               {/* Icons on the right */}
               <div className="flex space-x-3">
-                <Link to={`/view-task/${task._id}`} style={{ color: '#27667B' }}>
+                <Link to={`/view-task/${task._id}`} style={{ color: '#03C988' }}>
                   <EyeOutlined />
                 </Link>
-                <Link to={`/update/${task._id}`} style={{ color: '#27667B' }}>
+                <Link to={`/update/${task._id}`} style={{ color: '#03C988' }}>
                   <EditOutlined />
                 </Link>
-                <Link onClick={() => deleting(task._id)} style={{ color: '#27667B' }}>
+                <Link onClick={() => deleting(task._id)} style={{ color: '#03C988' }}>
                   <MinusCircleOutlined />
                 </Link>
               </div>

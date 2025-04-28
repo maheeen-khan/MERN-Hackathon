@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Layout, Menu, theme, Button } from 'antd';
 const { Header, Content, Footer } = Layout;
 import { Link, useLocation } from 'react-router-dom';
-import { SearchOutlined, UserAddOutlined, CaretDownOutlined, LogoutOutlined } from '@ant-design/icons';
+import { SearchOutlined, UserAddOutlined, CaretDownOutlined, LogoutOutlined, HomeOutlined, PlusSquareOutlined } from '@ant-design/icons';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import AddTaskPage from '../pages/AddTaskPage';
@@ -37,11 +37,13 @@ const MyLayout = ({ children }) => {
 
 
   const items = [
-    { key: "1", label: <Link to="/addTask"><UserAddOutlined /> Add Task</Link> },
-    { key: "2", label: <Link to="/user-panel"><SearchOutlined /> Search</Link> },
+    { key: "1", label: <Link to="/user-panel"><HomeOutlined /> Home</Link> },
+    { key: "2", label: <Link to="/addTask"><PlusSquareOutlined /> Add Task</Link> },
+    
+    { key: "3", label: <Link to="/user-panel"><SearchOutlined /> Search</Link> },
     // {key: '4', label: "Total Students : "+ totalStudents},
     {
-      key: '3', label: <button alt={"Logout"} className='logout user-btn pb-2' onClick={logout}>
+      key: '4', label: <button alt={"Logout"} className='logout user-btn pb-2' onClick={logout}>
 
         <i>L</i>
         <i>o</i>
@@ -55,12 +57,12 @@ const MyLayout = ({ children }) => {
   ];
 
   // Map pathname to Menu keys
-  // const getSelectedKeys = () => {
-  //   if (location.pathname === "/addTask") return ["1"];
-  //   if (location.pathname === "/") return ["2"];
-  //   if (location.pathname === "/") return ["3"];
-  //   return [];
-  // };
+  const getSelectedKeys = () => {
+    if (location.pathname === "/user-panel") return ["1"];
+    if (location.pathname === "/addTask") return ["2"];
+    if (location.pathname === "/user-panel") return ["3"];
+    return [];
+  };
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();

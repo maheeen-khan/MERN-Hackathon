@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
-/* From Uiverse.io by PriyanshuGupta28 */
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .spinner {
     position: absolute;
     width: 9px;

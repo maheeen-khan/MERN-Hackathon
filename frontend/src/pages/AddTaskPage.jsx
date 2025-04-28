@@ -137,7 +137,7 @@ const BasicForm = () => {
                     >
                         <div style={{ textAlign: 'center' }}>
                             <button
-                                alt={loading ? 'Adding...' : 'Add Student'}
+                                alt={loading ? 'Adding...' : 'Add Task'}
                                 className="user-btn"
                                 htmlType="submit"
                             >
