@@ -72,7 +72,8 @@ const Userpanel = () => {
     <div className="min-h-screen p-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* To Do Section */}
-        <div className="bg-[#5cc8a4] rounded-lg shadow-lg p-4 flex flex-col todo">
+        <div className="border-2 border-[#5cc8a4] p-2 rounded-lg todo">
+        <div className="bg-[#5cc8a4] rounded-lg shadow-lg p-4 flex flex-col">
           <div className="flex justify-between items-center mb-4 text-white">
             <h2 className="text-xl font-bold"><MenuOutlined /> To Do</h2>
 
@@ -104,9 +105,10 @@ const Userpanel = () => {
             )}
           </div>
         </div>
-
+        </div>
         {/* In Progress Section */}
-        <div className="bg-blue-400 rounded-lg shadow-lg p-4 flex flex-col doing">
+        <div className="border-2 border-blue-400 p-2 rounded-lg todo">
+        <div className="bg-blue-400 rounded-lg shadow-lg p-4 flex flex-col ">
           <div className="flex justify-between items-center mb-4 text-white">
             <h2 className="text-xl font-bold"><LoadingOutlined />  In Progress</h2>
             <span className="text-sm bg-white text-blue-600 rounded-full px-2">{inProgressTasks.length}</span>
@@ -136,9 +138,10 @@ const Userpanel = () => {
             )}
           </div>
         </div>
-
+        </div>
         {/* Done Section */}
-        <div className="bg-[#5cc8a4] rounded-lg shadow-lg p-4 flex flex-col done">
+        <div className="border-2 border-[#5cc8a4] p-2 rounded-lg todo">
+        <div className="bg-[#5cc8a4] rounded-lg shadow-lg p-4 flex flex-col">
           <div className="flex justify-between items-center mb-4 text-white">
             <h2 className="text-xl font-bold"><CheckCircleOutlined /> Done</h2>
             <span className="text-sm bg-white text-[#5cc8a4] rounded-full px-2">{doneTasks.length}</span>
@@ -166,6 +169,7 @@ const Userpanel = () => {
               <p className="text-white text-center mt-10">No tasks</p>
             )}
           </div>
+        </div>
         </div>
       </div>
     </div>
