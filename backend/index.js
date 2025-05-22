@@ -14,7 +14,7 @@ connectToDB()
 const app = express()
 const port = process.env.PORT || 4000
 
-app.use(cors({ allowedHeaders: ['Content-Type', 'Authorization'],origin:'*'})) 
+app.use(cors()) 
 app.use(express.json()) // Parse JSON bodies
 
 app.get('/', (req, res) => {
